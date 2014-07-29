@@ -1,10 +1,14 @@
 package be.xhibit.teletask.client.builder.composer;
 
+import be.xhibit.teletask.client.TDSClient;
 import be.xhibit.teletask.client.builder.composer.config.ConfigurationSupport;
 import be.xhibit.teletask.client.builder.composer.config.configurables.CommandConfigurable;
 import be.xhibit.teletask.client.builder.composer.config.configurables.FunctionConfigurable;
 import be.xhibit.teletask.client.builder.composer.config.configurables.StateConfigurable;
 import be.xhibit.teletask.client.builder.composer.config.configurables.StateKey;
+import be.xhibit.teletask.client.builder.message.EventMessage;
+import be.xhibit.teletask.client.builder.message.MessageUtilities;
+import be.xhibit.teletask.model.spec.ClientConfigSpec;
 import be.xhibit.teletask.model.spec.Command;
 import be.xhibit.teletask.model.spec.Function;
 import be.xhibit.teletask.model.spec.State;
@@ -34,6 +38,10 @@ public abstract class MessageHandlerSupport implements MessageHandler {
     @Override
     public int getStxValue() {
         return 2;
+    }
+
+    protected EventMessage createEventMessage(ClientConfigSpec config, byte[] eventData, Function function, int number, State state) {
+        return new EventMessage(config, eventData, function, number, state);
     }
 
     @Override
