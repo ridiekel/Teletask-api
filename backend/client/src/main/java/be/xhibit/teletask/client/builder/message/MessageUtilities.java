@@ -1,5 +1,6 @@
 package be.xhibit.teletask.client.builder.message;
 
+import be.xhibit.teletask.client.TDSClient;
 import be.xhibit.teletask.client.builder.ByteUtilities;
 import be.xhibit.teletask.client.builder.composer.MessageHandler;
 import be.xhibit.teletask.client.builder.message.response.AcknowledgeServerResponse;
@@ -17,6 +18,7 @@ import java.io.OutputStream;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.List;
+import java.util.concurrent.ConcurrentLinkedQueue;
 
 public final class MessageUtilities {
     /**
@@ -24,10 +26,26 @@ public final class MessageUtilities {
      */
     private static final Logger LOG = LoggerFactory.getLogger(MessageUtilities.class);
 
+    private static final Collection<EventMessage> TEST_EVENTS = new ConcurrentLinkedQueue<>();
+
+
     private MessageUtilities() {
     }
 
     public static <T> T receive(Class origin, InputStream inputStream, ClientConfigSpec config, MessageHandler messageHandler, StopCondition stopCondition, ResponseConverter<T> converter) throws Exception {
+        return converter.convert(TDSClient.isProduction() ? receiveProduction(origin, inputStream, config, messageHandler, stopCondition) : receiveTest());
+    }
+
+    private static List<ServerResponse> receiveTest() {
+        List<ServerResponse> responses = new ArrayList<>();
+        for (EventMessage eventMessage : TEST_EVENTS) {
+            responses.add(new EventMessageServerResponse(eventMessage));
+        }
+        TEST_EVENTS.clear();
+        return responses;
+    }
+
+    private static List<ServerResponse> receiveProduction(Class origin, InputStream inputStream, ClientConfigSpec config, MessageHandler messageHandler, StopCondition stopCondition) throws Exception {
         List<ServerResponse> responses = new ArrayList<>();
 
         byte[] overflow = new byte[1];
@@ -48,7 +66,12 @@ public final class MessageUtilities {
             Thread.sleep(10);
         }
 
-        return converter.convert(responses);
+        return responses;
+    }
+
+    public static void registerTestEvent(EventMessage message) {
+        LOG.debug("Registering test event: {}", message);
+        TEST_EVENTS.add(message);
     }
 
     private static byte[] extractResponses(Class origin, ClientConfigSpec config, MessageHandler messageHandler, Collection<ServerResponse> responses, byte[] data) throws Exception {
@@ -95,7 +118,7 @@ public final class MessageUtilities {
 
     public static ComponentSpec handleEvent(Class origin, ClientConfigSpec config, EventMessageServerResponse serverResponse) {
         EventMessage eventMessage = serverResponse.getEventMessage();
-        if (LOG.isDebugEnabled()) {
+        if (LOG.isDebugEnabled() && TDSClient.isProduction()) {
             LOG.debug("Event({}): {}", origin.getSimpleName(), eventMessage.getLogInfo(eventMessage.getRawBytes()));
         }
         ComponentSpec component = config.getComponent(eventMessage.getFunction(), eventMessage.getNumber());

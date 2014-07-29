@@ -3,6 +3,7 @@ package be.xhibit.teletask.client;
 import be.xhibit.teletask.client.builder.SendResult;
 import be.xhibit.teletask.client.builder.composer.MessageHandler;
 import be.xhibit.teletask.client.builder.composer.MessageHandlerFactory;
+import be.xhibit.teletask.client.builder.message.EventMessage;
 import be.xhibit.teletask.client.builder.message.GetMessage;
 import be.xhibit.teletask.client.builder.message.LogMessage;
 import be.xhibit.teletask.client.builder.message.MessageExecutor;
@@ -182,6 +183,10 @@ public final class TDSClient {
         return instance;
     }
 
+    public static boolean isProduction() {
+        return Boolean.getBoolean("production");
+    }
+
 // ################################################ PUBLIC API FUNCTIONS
 
     public void registerStateChangeListener(StateChangeListener listener) {
@@ -199,6 +204,10 @@ public final class TDSClient {
 
         try {
             sendResult = this.execute(new SetMessage(this.getConfig(), function, number, state));
+
+            if (!isProduction()) {
+                MessageUtilities.registerTestEvent(new EventMessage(getConfig(), null, function, number, state));
+            }
 
             ComponentSpec component = this.getConfig().getComponent(function, number);
             Long start = System.currentTimeMillis();
@@ -493,7 +502,7 @@ public final class TDSClient {
                     @Override
                     public void run() {
                         try {
-                            keepAliveStrategy.execute(TDSClient.this.getConfig(), TDSClient.this.getOutputStream(), TDSClient.this.getInputStream());
+                            KeepAliveService.this.keepAliveStrategy.execute(TDSClient.this.getConfig(), TDSClient.this.getOutputStream(), TDSClient.this.getInputStream());
                         } catch (Exception e) {
                             LOG.error("Exception ({}) caught in run: {}", e.getClass().getName(), e.getMessage(), e);
                         }
@@ -516,4 +525,6 @@ public final class TDSClient {
     public List<StateChangeListener> getStateChangeListeners() {
         return this.stateChangeListeners;
     }
+
+
 }

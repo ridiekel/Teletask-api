@@ -1,5 +1,6 @@
 package be.xhibit.teletask.client.builder.message;
 
+import be.xhibit.teletask.client.TDSClient;
 import be.xhibit.teletask.client.builder.ByteUtilities;
 import be.xhibit.teletask.client.builder.SendResult;
 import be.xhibit.teletask.client.builder.composer.MessageHandler;
@@ -88,16 +89,16 @@ public abstract class MessageSupport<R> {
     }
 
     private void send(OutputStream outputStream, byte[] message) throws IOException {
-        //Send data over socket
-        if (Boolean.getBoolean("production")) {
-            if (LOG.isDebugEnabled()) {
-                LOG.debug("Sending: {}", this.getLogInfo(message));
-            }
+        if (!TDSClient.isProduction()) {
+            LOG.debug(Strings.repeat("*", 80));
+            LOG.debug("TEST MODE ENABLED. NOTHING WILL BE SENT TO TELETASK CENTRAL UNIT");
+            LOG.debug(Strings.repeat("*", 80));
+        }
+        if (LOG.isDebugEnabled()) {
+            LOG.debug("Sending: {}", this.getLogInfo(message));
+        }
+        if (TDSClient.isProduction()) {
             MessageUtilities.send(outputStream, message);
-        } else {
-            if (LOG.isDebugEnabled()) {
-                LOG.debug("Test mode send: {}", this.getLogInfo(message));
-            }
         }
     }
 

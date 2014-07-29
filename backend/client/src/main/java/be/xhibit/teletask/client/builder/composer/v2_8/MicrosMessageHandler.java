@@ -1,11 +1,13 @@
 package be.xhibit.teletask.client.builder.composer.v2_8;
 
+import be.xhibit.teletask.client.TDSClient;
 import be.xhibit.teletask.client.builder.composer.MessageHandlerSupport;
 import be.xhibit.teletask.client.builder.composer.config.configurables.StateKey;
 import be.xhibit.teletask.client.builder.message.EventMessage;
 import be.xhibit.teletask.client.builder.message.GetMessage;
 import be.xhibit.teletask.client.builder.message.LogMessage;
 import be.xhibit.teletask.client.builder.message.MessageExecutor;
+import be.xhibit.teletask.client.builder.message.MessageUtilities;
 import be.xhibit.teletask.client.builder.message.strategy.GroupGetStrategy;
 import be.xhibit.teletask.client.builder.message.strategy.KeepAliveStrategy;
 import be.xhibit.teletask.model.spec.ClientConfigSpec;
@@ -58,7 +60,7 @@ public class MicrosMessageHandler extends MessageHandlerSupport {
         int number = eventData[++counter];
         int stateValue = eventData[++counter];
         State state = this.getState(new StateKey(function, stateValue == -1 ? 255 : stateValue));
-        return new EventMessage(config, eventData, function, number, state);
+        return this.createEventMessage(config, eventData, function, number, state);
     }
 
     @Override
