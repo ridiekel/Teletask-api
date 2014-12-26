@@ -10,7 +10,7 @@
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <artifactId>teletask-api-poylmer</artifactId>
+    <artifactId>teletask-api-polymer</artifactId>
 
     <packaging>war</packaging>
     <name>Teletask API - Polymer Interface</name>
