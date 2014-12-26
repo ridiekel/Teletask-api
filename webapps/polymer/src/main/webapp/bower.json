@@ -1,17 +1,20 @@
 {
-  "name": "teletask-api-polymer",
-  "version": "0.0.1",
+  "name": "Teletask-api",
+  "version": "0.0.0",
   "homepage": "https://github.com/xhibit/Teletask-api",
+  "description": "This is a Teletask-api",
+  "main": "index.html",
+  "keywords": [
+    "Teletask"
+  ],
   "authors": [
-    "Geroen Dierckx <geroen.dierckx@gmail.com>"
+    "Bruno Braes",
+    "Geroen Dierckx",
+    "Sofie Muys"
   ],
   "license": "MIT",
   "private": true,
-  "ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ]
+  "dependencies": {
+    "core-icons": "Polymer/core-icons#~0.5.2"
+  }
 }

@@ -1,8 +1,54 @@
 <!DOCTYPE html>
 <html>
 <head lang="en">
+    <meta charset="UTF-8">
+    <title>Teletask Controller</title>
+    <script src="bower_components/webcomponentsjs/webcomponents.js"></script>
+    <link rel="import" href="bower_components/paper-toggle-button/paper-toggle-button.html">
+    <link rel="import" href="bower_components/paper-slider/paper-slider.html">
+    <link rel="import" href="bower_components/paper-shadow/paper-shadow.html">
+    <link rel="import" href="bower_components/font-roboto/roboto.html">
+    <link rel="import" href="room-config.html">
+    <style>
+        body {
+            font-family: RobotoDraft, 'Helvetica Neue', Helvetica, Arial,serif;
+        }
+    </style>
 </head>
-<body>
-
+<body>****
+<room-config>
+bbbbbb
+</room-config>+++++
+<!--<div class="row-fluid">-->
+<!--<div class="col-md-4" ng-repeat="room in configController.config.rooms">-->
+<!--<div class="panel panel-primary">-->
+<!--<div class="panel-heading">-->
+<!--<h3 class="panel-title">{{room.name}}</h3>-->
+<!--</div>-->
+<!--<div class="panel-body">-->
+<!--<div ng-repeat="component in room.relays" class="list-group" >-->
+<!--<a class="list-group-item list-group-item-info" ng-click="configController.changeState(component, 'toggle')">{{component.description}} - Toggle</a>-->
+<!--<a class="list-group-item list-group-item-success" ng-click="configController.changeState(component, 'on')">{{component.description}} - On</a>-->
+<!--<a class="list-group-item list-group-item-danger" ng-click="configController.changeState(component, 'off')">{{component.description}} - Off</a>-->
+<!--</div>-->
+<!--<div ng-repeat="component in room.localMoods" class="list-group">-->
+<!--<a class="list-group-item list-group-item-info" ng-click="configController.changeState(component, 'toggle')">{{component.description}} - Toggle</a>-->
+<!--<a class="list-group-item list-group-item-success" ng-click="configController.changeState(component, 'on')">{{component.description}} - On</a>-->
+<!--<a class="list-group-item list-group-item-danger" ng-click="configController.changeState(component, 'off')">{{component.description}} - Off</a>-->
+<!--</div>-->
+<!--<div ng-repeat="component in room.motors" class="list-group">-->
+<!--<a class="list-group-item list-group-item-info" ng-click="configController.changeState(component, 'up')">{{component.description}} - Up</a>-->
+<!--<a class="list-group-item list-group-item-info" ng-click="configController.changeState(component, 'down')">{{component.description}} - Down</a>-->
+<!--<a class="list-group-item list-group-item-danger" ng-click="configController.changeState(component, 'stop')">{{component.description}} - Stop</a>-->
+<!--</div>-->
+<!--<div ng-repeat="component in room.generalMoods" class="list-group">-->
+<!--<a class="list-group-item list-group-item-info" ng-click="configController.changeState(component, 'toggle')">{{component.description}} - Toggle</a>-->
+<!--<a class="list-group-item list-group-item-success" ng-click="configController.changeState(component, 'on')">{{component.description}} - On</a>-->
+<!--<a class="list-group-item list-group-item-danger" ng-click="configController.changeState(component, 'off')">{{component.description}} - Off</a>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
+<!--</div>-->
 </body>
 </html>

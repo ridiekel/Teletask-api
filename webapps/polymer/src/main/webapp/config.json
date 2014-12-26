@@ -1,0 +1,704 @@
+{
+    "rooms": [
+        {
+            "relays": [ ],
+            "motors": [ ],
+            "generalMoods": [
+                {
+                    "function": "GENMOOD",
+                    "description": "Alles Uit gelijkvloers vooraan",
+                    "state": "ON",
+                    "number": 1
+                },
+                {
+                    "function": "GENMOOD",
+                    "description": "Alles Uit - Dag",
+                    "state": "OFF",
+                    "number": 2
+                },
+                {
+                    "function": "GENMOOD",
+                    "description": "Alles Uit - Nacht",
+                    "state": "OFF",
+                    "number": 3
+                },
+                {
+                    "function": "GENMOOD",
+                    "description": "Alles Uit - Nacht Automatisch",
+                    "state": "OFF",
+                    "number": 4
+                }
+            ],
+            "localMoods": [ ],
+            "name": "No Room",
+            "id": -1
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Tablet",
+                    "state": "OFF",
+                    "number": 16
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Ledjes",
+                    "state": "ON",
+                    "number": 17
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Pompbak",
+                    "state": "OFF",
+                    "number": 18
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [ ],
+            "name": "Keuken",
+            "id": 1
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Ledjes Trap",
+                    "state": "OFF",
+                    "number": 3
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Kastlichten",
+                    "state": "OFF",
+                    "number": 23
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "50%",
+                    "state": "OFF",
+                    "number": 9
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "25%",
+                    "state": "OFF",
+                    "number": 10
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "TV Kijken",
+                    "state": "OFF",
+                    "number": 21
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Spots Off/100%",
+                    "state": "OFF",
+                    "number": 37
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "AllesUit (toggle)",
+                    "state": "OFF",
+                    "number": 39
+                }
+            ],
+            "name": "Zitkamer",
+            "id": 2
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Licht",
+                    "state": "OFF",
+                    "number": 13
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Ledjes",
+                    "state": "ON",
+                    "number": 20
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [ ],
+            "name": "Eetkamer",
+            "id": 3
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Licht",
+                    "state": "OFF",
+                    "number": 22
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [ ],
+            "name": "Terras",
+            "id": 4
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Plafondlichten",
+                    "state": "OFF",
+                    "number": 4
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Stopcontacten Kast",
+                    "state": "ON",
+                    "number": 32
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "30 Seconden Licht",
+                    "state": "OFF",
+                    "number": 43
+                }
+            ],
+            "name": "Berging Boven",
+            "id": 5
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Licht",
+                    "state": "OFF",
+                    "number": 24
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [ ],
+            "name": "Garage Berging Trap",
+            "id": 6
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Licht",
+                    "state": "OFF",
+                    "number": 21
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [ ],
+            "name": "Garage Berging Vooraan",
+            "id": 7
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Lichten",
+                    "state": "OFF",
+                    "number": 19
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Garage Poort",
+                    "state": "OFF",
+                    "number": 30
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle lichten (toggle)",
+                    "state": "OFF",
+                    "number": 3
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Uit",
+                    "state": "ON",
+                    "number": 5
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Aan",
+                    "state": "OFF",
+                    "number": 22
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Poort",
+                    "state": "OFF",
+                    "number": 41
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "5 Minuten Licht",
+                    "state": "OFF",
+                    "number": 42
+                }
+            ],
+            "name": "Garage",
+            "id": 8
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Plafondlichten",
+                    "state": "OFF",
+                    "number": 1
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle lichten (toggle)",
+                    "state": "OFF",
+                    "number": 11
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Uit",
+                    "state": "ON",
+                    "number": 12
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Aan",
+                    "state": "OFF",
+                    "number": 13
+                }
+            ],
+            "name": "Slaapkamer",
+            "id": 9
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Licht",
+                    "state": "OFF",
+                    "number": 11
+                }
+            ],
+            "motors": [
+                {
+                    "function": "MOTOR",
+                    "description": "Rolluik",
+                    "state": "DOWN",
+                    "number": 1
+                }
+            ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle lichten (toggle)",
+                    "state": "OFF",
+                    "number": 14
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Uit",
+                    "state": "ON",
+                    "number": 15
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Aan",
+                    "state": "OFF",
+                    "number": 16
+                }
+            ],
+            "name": "Slaapkamer Thijs",
+            "id": 10
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Licht",
+                    "state": "OFF",
+                    "number": 12
+                }
+            ],
+            "motors": [
+                {
+                    "function": "MOTOR",
+                    "description": "Rolluik",
+                    "state": "DOWN",
+                    "number": 2
+                }
+            ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle lichten (toggle)",
+                    "state": "OFF",
+                    "number": 17
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Uit",
+                    "state": "ON",
+                    "number": 18
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Aan",
+                    "state": "OFF",
+                    "number": 19
+                }
+            ],
+            "name": "Slaapkamer Mia",
+            "id": 11
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Spot",
+                    "state": "OFF",
+                    "number": 6
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Ledjes",
+                    "state": "OFF",
+                    "number": 7
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle Lichten",
+                    "state": "OFF",
+                    "number": 35
+                }
+            ],
+            "name": "Inkomhal",
+            "id": 12
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Kastlichten",
+                    "state": "OFF",
+                    "number": 5
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Ledjes",
+                    "state": "ON",
+                    "number": 9
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [ ],
+            "name": "Gang Boven",
+            "id": 13
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Licht",
+                    "state": "OFF",
+                    "number": 15
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [ ],
+            "name": "Toilet",
+            "id": 14
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Douche",
+                    "state": "OFF",
+                    "number": 8
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Spots",
+                    "state": "OFF",
+                    "number": 10
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Spiegel",
+                    "state": "OFF",
+                    "number": 14
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle lichten (toggle)",
+                    "state": "OFF",
+                    "number": 7
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Uit",
+                    "state": "ON",
+                    "number": 8
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Aan",
+                    "state": "OFF",
+                    "number": 20
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Netwerk",
+                    "state": "ON",
+                    "number": 36
+                }
+            ],
+            "name": "Badkamer",
+            "id": 15
+        },
+        {
+            "relays": [ ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle stopcontacten bureau en zitkamer",
+                    "state": "ON",
+                    "number": 33
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Werken",
+                    "state": "OFF",
+                    "number": 38
+                }
+            ],
+            "name": "Bureau",
+            "id": 16
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Ventilatie Stand 1",
+                    "state": "OFF",
+                    "number": 27
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Ventilatie Stand 2",
+                    "state": "ON",
+                    "number": 28
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Ventilatie Stand 3",
+                    "state": "OFF",
+                    "number": 29
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle Lichten (toggle)",
+                    "state": "OFF",
+                    "number": 4
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Uit (toggle)",
+                    "state": "OFF",
+                    "number": 6
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Ventilatie Stand 1",
+                    "state": "OFF",
+                    "number": 23
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Ventilatie Stand 2",
+                    "state": "ON",
+                    "number": 24
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Ventilatie Stand 3",
+                    "state": "OFF",
+                    "number": 25
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "VS-2-3-UIT",
+                    "state": "OFF",
+                    "number": 26
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "VS-1-3-UIT",
+                    "state": "ON",
+                    "number": 27
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "VS-1-2-UIT",
+                    "state": "OFF",
+                    "number": 28
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Ledjes aan",
+                    "state": "OFF",
+                    "number": 29
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Startup",
+                    "state": "ON",
+                    "number": 32
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Ledjes uit",
+                    "state": "OFF",
+                    "number": 34
+                }
+            ],
+            "name": "Globaal",
+            "id": 17
+        },
+        {
+            "relays": [ ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle Lichten (toggle)",
+                    "state": "OFF",
+                    "number": 1
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Rolluiken Down",
+                    "state": "ON",
+                    "number": 30
+                },
+                {
+                    "function": "LOCMOOD",
+                    "description": "Rolluiken Up",
+                    "state": "OFF",
+                    "number": 31
+                }
+            ],
+            "name": "Boven",
+            "id": 18
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Geschakelde Stopcontacten",
+                    "state": "ON",
+                    "number": 25
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alle Lichten (toggle)",
+                    "state": "OFF",
+                    "number": 2
+                }
+            ],
+            "name": "Gelijkvloers",
+            "id": 19
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Buiten",
+                    "state": "OFF",
+                    "number": 26
+                },
+                {
+                    "function": "RELAY",
+                    "description": "Binnen",
+                    "state": "OFF",
+                    "number": 31
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [
+                {
+                    "function": "LOCMOOD",
+                    "description": "Alles Uit (toggle)",
+                    "state": "OFF",
+                    "number": 40
+                }
+            ],
+            "name": "Tuinhuis",
+            "id": 20
+        },
+        {
+            "relays": [
+                {
+                    "function": "RELAY",
+                    "description": "Traplicht",
+                    "state": "OFF",
+                    "number": 2
+                }
+            ],
+            "motors": [ ],
+            "generalMoods": [ ],
+            "localMoods": [ ],
+            "name": "Trap Garage",
+            "id": 21
+        }
+    ],
+    "centralUnitType": "MICROS_PLUS",
+    "host": "192.168.1.205",
+    "port": 55957
+}
