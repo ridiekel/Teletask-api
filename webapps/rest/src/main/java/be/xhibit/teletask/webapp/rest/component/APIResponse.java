@@ -21,6 +21,10 @@ public class APIResponse {
         this.component = component;
     }
 
+    /**
+     * Returns whether the request call was successfull.
+     * @return String success | failure
+     */
     public String getStatus() {
         return this.status;
     }
