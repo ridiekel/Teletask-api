@@ -3,3 +3,5 @@ target/
 *.iml
 *.war
 logs/
+centrale.ttt
+config.json

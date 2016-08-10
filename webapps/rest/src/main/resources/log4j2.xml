@@ -7,7 +7,7 @@
         <Console name="console" target="SYSTEM_OUT">
             <PatternLayout pattern="${pattern}" />
         </Console>
-        <RollingFile name="teletask" fileName="${sys:logfile}" append="true" filePattern="${sys:logfile}-%d{yyyy-MM-dd}-%i.log.gz">
+        <RollingFile name="teletask" fileName="${sys:logdir}/teletask.log" append="true" filePattern="${sys:logfile}-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout pattern="${pattern}" />
             <Policies>
                 <TimeBasedTriggeringPolicy />
@@ -15,7 +15,7 @@
             </Policies>
             <DefaultRolloverStrategy max="5"/>
         </RollingFile>
-        <RollingFile name="mqtt" fileName="${sys:mqtt.logfile}" append="true" filePattern="${sys:mqtt.logfile}-%d{yyyy-MM-dd}-%i.log.gz">
+        <RollingFile name="mqtt" fileName="${sys:logdir}/mqtt.log" append="true" filePattern="${sys:mqtt.logfile}-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout pattern="${pattern}" />
             <Policies>
                 <TimeBasedTriggeringPolicy />
@@ -23,7 +23,7 @@
             </Policies>
             <DefaultRolloverStrategy max="5"/>
         </RollingFile>
-        <RollingFile name="ota" fileName="${sys:ota.logfile}" append="true" filePattern="${sys:ota.logfile}-%d{yyyy-MM-dd}-%i.log.gz">
+        <RollingFile name="ota" fileName="${sys:logdir}/ota.log" append="true" filePattern="${sys:ota.logfile}-%d{yyyy-MM-dd}-%i.log.gz">
             <PatternLayout pattern="${pattern}" />
             <Policies>
                 <TimeBasedTriggeringPolicy />
